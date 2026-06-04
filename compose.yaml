@@ -1,0 +1,32 @@
+services:
+  portfolio:
+    build: .
+    env_file: .env
+    ports:
+      - 3000:3000
+    networks:
+      - proxy
+      - internal
+    restart: unless-stopped
+  # db:
+  #   image: postgres
+  #   restart: always
+  #   ports:
+  #     - 5432:5432
+  #   environment:
+  #     POSTGRES_USER: root
+  #     POSTGRES_PASSWORD: mysecretpassword
+  #     POSTGRES_DB: local
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql
+  #   networks:
+  #     - internal
+
+networks:
+  proxy:
+    external: true
+  internal:
+    driver: bridge
+
+volumes:
+  pgdata:

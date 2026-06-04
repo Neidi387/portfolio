@@ -1,0 +1,11 @@
+node_modules
+.svelte-kit
+build
+.env
+.git
+.gitignore
+.storybook
+storybook-static
+playwright-report
+test-results
+*.md
