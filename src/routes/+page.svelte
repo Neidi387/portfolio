@@ -4,7 +4,8 @@
 </svelte:head>
 
 <section>
-	<a href="http://steve.neidenberger.dev/">Im the best Softwaredeveloper in the world</a>
+	<p>Im the best Softwaredeveloper in the world</p>
+	<a href="http://steve.neidenberger.dev/">Discover your City</a>
 </section>
 
 <style>
